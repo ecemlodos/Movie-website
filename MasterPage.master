@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            border:thin solid #808080;
+            background-color:#784501;
+       
+        }
+        .auto-style2 {
+            width: 900px;
+            height: 30px;
+            margin:auto;
+        }
+         .auto-styleback{
+            background-image:url(images/movies.jpg);
+        }
+        
+        .auto-style3 {
+            width: 100%;
+            height:60px;
+                    }
+        .auto-style4 {
+            width: 17%;
+            height:50px;
+            text-align:left;
+            
+        }
+        
+        .auto-style5 {
+            width: 13%;
+            height: 50px;
+        }
+        .auto-style6 {
+            width: 17%;
+            height: 50px;
+            text-align:right;
+        }
+        .auto-style7 {
+            width: 40%;
+            height: 50px;
+            text-align:center;
+            
+        }
+         .auto-style8{
+            width:900px;
+            height:auto;
+            margin:auto;
+        }
+        .auto-style9 {
+            height: 10%;
+            width:150px;
+            text-align:right;
+        }
+        .auto-style10 {
+            height: 3%;
+            width:150px;
+            text-align:left;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-styleback" style="height:auto;">
+    <div class="auto-style1">
+        
+        <table class="auto-style3">
+            <tr>
+                <td class="auto-style5">
+                    <asp:ImageButton ID="ImageButton1" runat="server" ImageAlign="Middle" Height="85px" ImageUrl="~/images/LogoMovre.jpeg" Width="195px" OnClick="ImageButton1_Click" />
+                </td>
+                <td class="auto-style4">
+                    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" Height="30px" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="140px">
+                        <asp:ListItem>Menu</asp:ListItem>
+                        <asp:ListItem>Genre</asp:ListItem>
+                        <asp:ListItem>Actor</asp:ListItem>
+                        <asp:ListItem>Director</asp:ListItem>
+                    </asp:DropDownList>
+                </td>
+                <td class="auto-style7">
+                    <asp:TextBox ID="TextBox1" runat="server" Placeholder="Search..." Width="430px" Height="25px"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Search" Height="27px" Width="69px" />
+                </td>
+                <td class="auto-style9">
+                    <asp:TextBox ID="textboxUsername" style="width:80px" runat="server" Placeholder="Username" AutoCompleteType="Disabled"></asp:TextBox> <br />
+                    <asp:TextBox ID="textboxPassword" style="width:80px" runat="server" Placeholder="Password" AutoCompleteType="Disabled" TextMode="Password">Password</asp:TextBox> <br />
+                    <asp:Button ID="buttonLogin" style="width:70px" runat="server" Text="Login" OnClick="buttonLogin_Click" />
+                    <asp:Button ID="buttonSignUp" style="width:70px" runat="server" Text="Sign Up" OnClick="buttonSignUp_Click" />
+                </td>
+                <td class="auto-style6">
+                    <asp:ImageButton ID="ImageButton2" runat="server" Height="60px" ImageUrl="~/images/User_.png" Width="68px" OnClick="ImageButton2_Click" />
+                </td>
+                <td class="auto-style10">
+                    <asp:ImageButton ID="ImageButton3" runat="server" Height="47px" ImageUrl="~/images/mail.png" Width="48px" OnClick="ImageButton3_Click" />
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+        <div class="auto-style2" style="background-color:#ffe2bc"> <asp:Label ID="labelError" runat="server" style="color:red" Text=""></asp:Label></div>
+        <div class="auto-style8" style="background-color:#ffe2bc"> 
+            <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        </div>
+            <div class="auto-style2" style="background-color:#ffe2bc"> </div>
+
+            </div>
+    </form>
+</body>
+</html>
+
